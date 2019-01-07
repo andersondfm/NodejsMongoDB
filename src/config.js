@@ -3,6 +3,5 @@ global.EMAIL_TMPL = 'Olá, <strong>{0}</strong>, seja bem vindo à Node Anderson
 
 module.exports = {
     connectionString: 'mongodb://admin:a23028366@ds031108.mlab.com:31108/ndstr',
-    sendgridKey: 'TBD',
     containerConnectionString: 'TBD'
 }

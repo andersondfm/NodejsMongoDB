@@ -4,7 +4,7 @@ const ValidationContract = require('../validators/validador');
 const repository = require('../repositories/customer-repository');
 const md5 = require('md5');
 //const authService = require('../services/auth-service');
-//const emailService = require('../services/email-service');
+const emailService = require('../services/email-service');
 
 exports.post = async(req, res, next) => {
     let contract = new ValidationContract();
@@ -24,6 +24,9 @@ exports.post = async(req, res, next) => {
             password: md5(req.body.password + global.SALT_KEY),
             roles: ["user"]
         });
+
+        emailService.send(req.body.email,'Bem vindo ao Node Store', global.EMAIL_TMPL.replace('{0}', req.body.name));
+
         res.status(201).send({
             message: 'Cliente cadastrado com sucesso!'
         });
@@ -33,7 +36,7 @@ exports.post = async(req, res, next) => {
         });
     }
 };
-/*
+/*//anderson
 exports.authenticate = async(req, res, next) => {
     try {
         const customer = await repository.authenticate({
