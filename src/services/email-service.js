@@ -1,6 +1,6 @@
 'use strict';
 var config = require('../config');
-var sendgrid = require('sendgrid')('Coloca Aqui Sua Key Aqui 2');
+var sendgrid = require('sendgrid')('Coloca Aqui Sua Key Aqui 3');
 
 exports.send = async (to, subject, body) => {
     sendgrid.send({
