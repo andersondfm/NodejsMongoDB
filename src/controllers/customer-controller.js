@@ -12,7 +12,7 @@ exports.post = async(req, res, next) => {
     contract.isEmail(req.body.email, 'E-mail inválido');
     contract.hasMinLen(req.body.password, 6, 'A senha deve conter pelo menos 6 caracteres');
 
-    // Se os dados forem inválidos
+    // Se os dados forem inválidos ok
     if (!contract.isValid()) {
         res.status(400).send(contract.errors()).end();
         return;
