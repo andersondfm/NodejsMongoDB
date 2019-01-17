@@ -4,5 +4,5 @@ Nodejs API + Mongo + Token
 
 Anderson de Freitas Migloranza
 =======
-Ambiente de Homologado
+Ambiente de Homologação
 >>>>>>> 3e496c5b1ba753995e481c35ff0ae8bfd7d25dc0
