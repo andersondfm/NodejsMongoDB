@@ -2,6 +2,7 @@
 
 const ValidationContract = require('../validators/validador');
 const repository = require('../repositories/produto-repository');
+const authService = require('../services/auth-service');
 const md5 = require('md5');
 
 //Inserir

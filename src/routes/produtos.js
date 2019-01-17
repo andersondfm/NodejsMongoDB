@@ -5,7 +5,7 @@ const router = express.Router();
 const controller = require('../controllers/produto-controller');
 const authService = require('../services/auth-service');
 
-router.get('/', controller.get);
+router.get('/',authService.authorize, controller.get);
 router.get('/:slug', controller.getBySlug);
 router.get('/admin/:id', controller.getByID);
 router.get('/tags/:tag', controller.getByTag);

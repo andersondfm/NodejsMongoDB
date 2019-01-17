@@ -3,7 +3,7 @@
 const ValidationContract = require('../validators/validador');
 const repository = require('../repositories/customer-repository');
 const md5 = require('md5');
-//const authService = require('../services/auth-service');
+const authService = require('../services/auth-service');
 const emailService = require('../services/email-service');
 
 exports.post = async(req, res, next) => {
@@ -36,7 +36,7 @@ exports.post = async(req, res, next) => {
         });
     }
 };
-/*//anderson
+
 exports.authenticate = async(req, res, next) => {
     try {
         const customer = await repository.authenticate({
@@ -105,4 +105,4 @@ exports.refreshToken = async(req, res, next) => {
             message: 'Falha ao processar sua requisição'
         });
     }
-};*/
+};
