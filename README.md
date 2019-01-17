@@ -1,6 +1,5 @@
 # Crud Básico de Nodejs + MongoDB
-# Próxima Etapa é Token e Autenticação
-Nodejs API + Mongo
+Nodejs API + Mongo + Token
 <<<<<<< HEAD
 
 Anderson de Freitas Migloranza
